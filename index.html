@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Shyam Associates | Prop. KL Meena - Real Estate Consultants Delhi NCR</title>
+  <meta name="description" content="Trusted Real Estate Consultants in Dwarka, Gurugram, South Delhi & Delhi NCR. Sale, Purchase, Renting & Builder Collaboration by Prop. KL Meena." />
+  <style>
+    :root {
+      --primary: #0f2942;
+      --primary-light: #1a3f63;
+      --accent: #d97706;
+      --accent-hover: #b45309;
+      --whatsapp: #16a34a;
+      --whatsapp-hover: #15803d;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Top Bar */
+    .topbar {
+      background: #091a2c;
+      color: #e2e8f0;
+      font-size: 0.85rem;
+      padding: 8px 20px;
+    }
+
+    .topbar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .topbar a {
+      color: #fbbf24;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      border: 2px solid var(--accent);
+    }
+
+    .brand-title h1 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .brand-title span {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #fff;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-hover);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.6);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0f2942 0%, #1d466e 100%);
+      color: #fff;
+      padding: 64px 20px;
+    }
+
+    .hero-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-block;
+      background: rgba(217, 119, 6, 0.2);
+      border: 1px solid rgba(251, 191, 36, 0.5);
+      color: #fcd34d;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      font-size: 2.3rem;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: #e2e8f0;
+    }
+
+    .hero-badges span {
+      background: rgba(255,255,255,0.08);
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    .consultant-card {
+      background: #ffffff;
+      color: var(--text);
+      border-radius: 14px;
+      padding: 26px;
+      box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+    }
+
+    .consultant-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+
+    .avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fbbf24;
+      font-weight: 700;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .consultant-info-item {
+      margin-bottom: 12px;
+      font-size: 0.92rem;
+    }
+
+    .consultant-info-item strong {
+      display: block;
+      color: var(--primary);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Sections */
+    section {
+      padding: 64px 20px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 42px;
+    }
+
+    .section-tag {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .section-head h2 {
+      font-size: 1.95rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    /* Cards Grid */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .card-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .card-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Lists */
+    .styled-list {
+      list-style: none;
+    }
+
+    .styled-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.96rem;
+    }
+
+    .styled-list li:last-child {
+      border-bottom: none;
+    }
+
+    .styled-list li::before {
+      content: "✓ ";
+      color: var(--whatsapp);
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
+    .area-box {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .area-box:last-child {
+      border-bottom: none;
+    }
+
+    .area-box h4 {
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .area-box p {
+      margin: 0;
+      font-size: 0.92rem;
+    }
+
+    .cta-strip {
+      margin-top: 32px;
+      background: var(--primary);
+      color: #fff;
+      padding: 20px 24px;
+      border-radius: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* About */
+    .about-bg {
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .pillar {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    .pillar h4 {
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .pillar p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Form & Contact */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .status-msg {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--whatsapp);
+      font-weight: 600;
+      display: none;
+    }
+
+    /* Footer */
+    footer {
+      background: #091a2c;
+      color: #cbd5e1;
+      padding: 48px 20px 24px;
+    }
+
+    .footer-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    footer h4 {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+    }
+
+    footer a:hover {
+      color: #fbbf24;
+    }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 20px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      gap: 10px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h2 {
+        font-size: 1.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>📍 Shop No. 246, 2nd Floor, Vardhman City Mall, Sector 7, Ramphal Chowk, Dwarka - 110075</span>
+      <span>✉️ <a href="mailto:klmeenameena67@gmail.com">klmeenameena67@gmail.com</a> | Prop. KL Meena</span>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-badge">SSA</div>
+        <div class="brand-title">
+          <h1>Shri Shyam Associates</h1>
+          <span>Trusted Real Estate Consultants • Delhi NCR</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#areas">Areas We Cover</a>
+        <a href="#about">About Us</a>
+        <a href="#contact" class="btn btn-primary" style="padding: 9px 16px; color: #fff;">Send Inquiry</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-grid">
+      <div>
+        <span class="pill">Shri Shyam Associates • Prop. KL Meena</span>
+        <h2>Your Trusted Property Partner in Dwarka & Delhi NCR</h2>
+        <p>Expert assistance in Sale, Purchase, Renting & Collaboration for Residential & Commercial Properties across Dwarka, Gurugram, South Delhi & Delhi NCR.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/919599801767?text=Hello%20KL%20Meena%20ji,%20I%20would%20like%20to%20discuss%20a%20property%20requirement." target="_blank" class="btn btn-whatsapp">Chat on WhatsApp</a>
+          <a href="tel:+919599801767" class="btn btn-outline">Call +91 9599801767</a>
+        </div>
+        <div class="hero-badges">
+          <span>✔ Residential & Commercial</span>
+          <span>✔ 100% Transparent Deals</span>
+          <span>✔ Dwarka • Gurugram • South Delhi</span>
+        </div>
+      </div>
+
+      <!-- Direct Consultation Card -->
+      <div class="consultant-card">
+        <div class="consultant-header">
+          <div class="avatar">KL</div>
+          <div>
+            <small style="color: var(--accent); font-weight: 700;">DIRECT CONSULTATION</small>
+            <h3 style="color: var(--primary); margin: 2px 0;">KL Meena</h3>
+            <span style="font-size: 0.85rem; color: var(--muted);">Proprietor • Shri Shyam Associates</span>
+          </div>
+        </div>
+        <div class="consultant-info-item">
+          <strong>Core Real Estate Services</strong>
+          Sale • Purchase • Renting • Collaboration
+        </div>
+        <div class="consultant-info-item">
+          <strong>Dwarka Office</strong>
+          Shop No. 246, 2nd Floor, Vardhman City Mall, Sector 7, Ramphal Chowk, Dwarka, New Delhi - 110075
+        </div>
+        <div class="consultant-info-item">
+          <strong>Direct Call & WhatsApp</strong>
+          +91 9599801767
+        </div>
+        <a href="#contact" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Send Property Requirement</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">What We Offer</span>
+        <h2>Complete Real Estate Solutions</h2>
+        <p>Whether you are buying your family home, selling an asset, leasing commercial space, or planning a builder collaboration, we ensure smooth and verified transactions.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card">
+          <div>
+            <h3>Property Sale</h3>
+            <p>Verified buyers, fair market valuation, and smooth documentation for flats, builder floors, plots, shops, and offices.</p>
+          </div>
+          <a href="#contact" class="card-link">Sell Your Property →</a>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Property Purchase</h3>
+            <p>End-to-end guidance to find the right residential home or high-return commercial investment within your budget.</p>
+          </div>
+          <a href="#contact" class="card-link">Buy a Property →</a>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Property Renting & Leasing</h3>
+            <p>Hassle-free rental and commercial leasing solutions for families, corporates, retail showrooms, and offices.</p>
+          </div>
+          <a href="#contact" class="card-link">Rent / Lease Now →</a>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>Builder Collaboration</h3>
+            <p>Trusted joint-venture and redevelopment collaboration deals for plot owners and builders across Dwarka and Delhi NCR.</p>
+          </div>
+          <a href="#contact" class="card-link">Discuss Collaboration →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio & Locations -->
+  <section id="areas" style="padding-top: 10px;">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Portfolio & Reach</span>
+        <h2>Property Categories & Areas We Cover</h2>
+        <p>Strong local ground network across Dwarka, Gurugram, South Delhi, and prime Delhi NCR corridors.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div>
+            <span class="section-tag">Property Types We Deal In</span>
+            <h3>Residential & Commercial Segments</h3>
+            <ul class="styled-list">
+              <li>Residential Flats & Apartments (DDA, CGHS Societies & Builder Flats)</li>
+              <li>Independent Builder Floors (2 BHK, 3 BHK, 4 BHK & Luxury Floors)</li>
+              <li>Residential & Commercial Plots (Freehold & Collaboration Plots)</li>
+              <li>Retail Shops & Showrooms (High-Footfall Markets & Malls)</li>
+              <li>Commercial Office Spaces (Furnished & Bare-Shell Workspaces)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <span class="section-tag">Key Locations Covered</span>
+            <h3>Active Deals Across Delhi NCR</h3>
+            <div class="area-box">
+              <h4>Dwarka (All Sectors)</h4>
+              <p>Sector 7 Ramphal Chowk, Sector 6, 8, 9, 10, 11, 12, 19, 21, 22, 23 & all Dwarka Sub-city sectors.</p>
+            </div>
+            <div class="area-box">
+              <h4>Gurugram</h4>
+              <p>Dwarka Expressway, New Gurugram, Palam Vihar, and prime residential & commercial sectors.</p>
+            </div>
+            <div class="area-box">
+              <h4>South Delhi</h4>
+              <p>Vasant Kunj, Safdarjung, Green Park, Hauz Khas, Greater Kailash & prime South Delhi colonies.</p>
+            </div>
+            <div class="area-box">
+              <h4>Complete Delhi NCR</h4>
+              <p>End-to-end real estate advisory, investment, and collaboration support across the entire NCR region.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-strip">
+        <strong>Looking for a specific sector or property?</strong>
+        <a href="tel:+919599801767" class="btn btn-primary">Consult KL Meena: +91 9599801767</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-bg">
+    <div class="container">
+      <div class="section-head" style="margin-bottom: 24px;">
+        <span class="section-tag">About Shri Shyam Associates</span>
+        <h2>Built on Trust, Local Market Insight & Transparent Dealings</h2>
+      </div>
+      <p style="max-width: 860px; margin: 0 auto 14px; text-align: center; color: var(--text);">
+        Led by Proprietor <strong>KL Meena</strong>, Shri Shyam Associates is a dedicated real estate consultancy based at Vardhman City Mall, Sector 7, Ramphal Chowk, Dwarka. We specialize in connecting genuine buyers, sellers, tenants, landlords, and builders across Dwarka, Gurugram, South Delhi, and the wider Delhi NCR.
+      </p>
+      <p style="max-width: 860px; margin: 0 auto; text-align: center; color: var(--muted);">
+        Real estate decisions involve major financial commitments. We focus on verified property titles, accurate market pricing, clear communication between parties, and smooth paperwork from initial site visit to final registry or lease execution.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h4>Deep Local Expertise</h4>
+          <p>Accurate sector-wise insights on Dwarka, Gurugram, and South Delhi residential & commercial property trends.</p>
+        </div>
+        <div class="pillar">
+          <h4>100% Transparent Deals</h4>
+          <p>Direct, honest negotiations with zero hidden surprises—ensuring peace of mind for both buyers and sellers.</p>
+        </div>
+        <div class="pillar">
+          <h4>Documentation Support</h4>
+          <p>Complete guidance on agreement to sell, lease deeds, collaboration agreements, and registry formalities.</p>
+        </div>
+        <div class="pillar">
+          <h4>Personalized Service</h4>
+          <p>Direct involvement of KL Meena to shortlist properties tailored strictly to your budget and location needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Inquiry Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Get In Touch</span>
+        <h2>Send Your Property Inquiry or Visit Our Office</h2>
+        <p>Fill out your requirement below to send a direct formatted message to KL Meena on WhatsApp, or call us directly.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- WhatsApp Form -->
+        <div class="card">
+          <h3>Property Inquiry Form</h3>
+          <p>Submit your details to connect directly on WhatsApp (+91 9599801767).</p>
+          <form id="whatsappForm">
+            <div class="form-group">
+              <label for="name">Your Full Name *</label>
+              <input type="text" id="name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp Number *</label>
+              <input type="tel" id="phone" placeholder="Enter your 10-digit mobile number" required />
+            </div>
+            <div class="form-group">
+              <label for="requirement">Requirement *</label>
+              <select id="requirement" required>
+                <option value="Buy / Purchase">Buy / Purchase</option>
+                <option value="Sell Property">Sell Property</option>
+                <option value="Rent / Lease">Rent / Lease</option>
+                <option value="Builder Collaboration">Builder Collaboration</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="propertyType">Property Type *</label>
+              <select id="propertyType" required>
+                <option value="Residential (Flat / Floor / Plot)">Residential (Flat / Floor / Plot)</option>
+                <option value="Commercial (Shop / Showroom / Office)">Commercial (Shop / Showroom / Office)</option>
+                <option value="Plot for Collaboration">Plot for Collaboration</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location">Preferred Location / Sector</label>
+              <input type="text" id="location" placeholder="e.g., Sector 7 Dwarka, Dwarka Expressway, South Delhi" />
+            </div>
+            <div class="form-group">
+              <label for="details">Additional Details (Budget, Size, etc.)</label>
+              <textarea id="details" rows="3" placeholder="Mention BHK, area size, budget range, etc."></textarea>
+            </div>
+            <button type="submit" class="btn btn-whatsapp" style="width: 100%;">Send Inquiry via WhatsApp</button>
+            <div id="statusMsg" class="status-msg">Opening WhatsApp... Your property inquiry has been formatted for KL Meena.</div>
+          </form>
+        </div>
+
+        <!-- Official Contact Details -->
+        <div class="card">
+          <div>
+            <h3>Official Contact Details</h3>
+            <p><strong>Shri Shyam Associates</strong><br />Proprietor: KL Meena</p>
+
+            <div class="area-box">
+              <h4>Phone / WhatsApp</h4>
+              <p><a href="tel:+919599801767" style="color: var(--primary); font-weight: 600; text-decoration: none;">+91 9599801767</a></p>
+            </div>
+
+            <div class="area-box">
+              <h4>Email Address</h4>
+              <p><a href="mailto:klmeenameena67@gmail.com" style="color: var(--primary); text-decoration: none;">klmeenameena67@gmail.com</a></p>
+            </div>
+
+            <div class="area-box">
+              <h4>Office Address</h4>
+              <p>Shop No. 246, 2nd Floor, Vardhman City Mall, Sector 7, Ramphal Chowk, Dwarka, New Delhi - 110075</p>
+            </div>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Vardhman+City+Mall+Sector+7+Ramphal+Chowk+Dwarka+New+Delhi+110075" target="_blank" class="btn btn-primary" style="margin-top: 20px;">
+            Get Directions on Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>Shri Shyam Associates</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6;">Trusted Real Estate Consultants in Dwarka, Gurugram, South Delhi & Delhi NCR for Residential & Commercial Sale, Purchase, Renting & Collaboration.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services (Sale, Purchase, Rent, Collab)</a>
+        <a href="#areas">Areas We Cover</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact & Inquiry</a>
+      </div>
+      <div>
+        <h4>Contact KL Meena</h4>
+        <p style="font-size: 0.9rem; margin-bottom: 8px;">Shop No. 246, 2nd Floor, Vardhman City Mall, Sector 7, Ramphal Chowk, Dwarka, New Delhi - 110075</p>
+        <a href="tel:+919599801767">+91 9599801767</a>
+        <a href="mailto:klmeenameena67@gmail.com">klmeenameena67@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Shri Shyam Associates (Prop. KL Meena). All Rights Reserved.</span>
+      <span>Dwarka • Gurugram • South Delhi • Delhi NCR</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const requirement = document.getElementById('requirement').value;
+      const propertyType = document.getElementById('propertyType').value;
+      const location = document.getElementById('location').value.trim() || 'Not specified';
+      const details = document.getElementById('details').value.trim() || 'Not specified';
+
+      const message =
+        `*New Property Inquiry - Shri Shyam Associates*%0A%0A` +
+        `*Name:* ${encodeURIComponent(name)}%0A` +
+        `*Phone:* ${encodeURIComponent(phone)}%0A` +
+        `*Requirement:* ${encodeURIComponent(requirement)}%0A` +
+        `*Property Type:* ${encodeURIComponent(propertyType)}%0A` +
+        `*Preferred Location:* ${encodeURIComponent(location)}%0A` +
+        `*Details:* ${encodeURIComponent(details)}`;
+
+      document.getElementById('statusMsg').style.display = 'block';
+      window.open(`https://wa.me/919599801767?text=${message}`, '_blank');
+    });
+  </script>
+
+</body>
+</html>
